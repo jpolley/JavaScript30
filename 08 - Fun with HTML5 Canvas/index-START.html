@@ -32,14 +32,13 @@
     ctx.moveTo(lastX, lastY)
     // go to
     ctx.lineTo(e.offsetX, e.offsetY)
-    ctx.stroke()
+    ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY]
     
     hue++
     if (hue >= 360) {
       hue = 0
     }
-  }
   if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
     direction = !direction;
   } 
@@ -49,8 +48,9 @@
     ctx.lineWidth--
   }
 
+  }
   canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true
+    isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY]
   })
 
